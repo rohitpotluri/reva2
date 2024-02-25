@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Club Search</title>
+</head>
+<body>
+    <h1>Club Search</h1>
+    <form method="get">
+        <input type="text" name="query" placeholder="Search clubs">
+        <button type="submit">Search</button>
+    </form>
+    {% for club in clubs %}
+        <div>
+            <h2>{{ club.name }}</h2>
+            <p>{{ club.description }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>
